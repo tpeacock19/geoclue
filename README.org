@@ -1,0 +1,63 @@
+* GeoClue
+  :PROPERTIES:
+  :ID:       d8b8c6ad-8c31-425c-b51a-96e88d28286f
+  :END:
+
+  This is an Emacs library which
+
+** Requirements
+   :PROPERTIES:
+   :ID:       2a999136-569e-4c60-a91d-e7d980efdab3
+   :END:
+
+   - GeoClue 2.x.
+   - Linux, probably.
+   - Emacs 25.x or greater.
+
+** Usage
+   :PROPERTIES:
+   :ID:       d7d5ebad-af00-4986-9454-baf7fe4a8dc5
+   :END:
+
+*** Start services
+    :PROPERTIES:
+    :ID:       7c36afa2-97c8-4fdb-9269-c96c0100a05c
+    :END:
+
+    It’s not necessary to call this, but you may put it in your
+    startup files to speed up location access when you need it.
+
+    When services are started, a handler is registered which is
+    notified any time the location changes.
+
+    #+BEGIN_SRC emacs-lisp
+      (geoclue-start)
+    #+END_SRC
+
+*** Get the current location
+    :PROPERTIES:
+    :ID:       ca2180e2-4986-4c3b-a140-296b4260f844
+    :END:
+
+    This function signals an error if the location can’t be
+    determined.  It automatically starts location services as needed.
+
+    #+BEGIN_SRC emacs-lisp :results value verbatim
+      (geoclue-location)
+    #+END_SRC
+
+    #+RESULTS:
+    : ((accuracy . 13000.0) (altitude . -1.7976931348623157e+308) (heading . 90.0) (latitude . 45.53169856011519) (longitude . -122.5569) (speed . 3.3034858786925962) (description . "") (timestamp 1562736105 0))
+
+
+*** Stop services
+    :PROPERTIES:
+    :ID:       72df5686-dfa2-498f-b58c-3c1996184a63
+    :END:
+
+    This unregisters handlers, stops services, and releases all
+    resources consumed by =(geoclue-start)=.
+
+    #+BEGIN_SRC emacs-lisp
+      (geoclue-stop)
+    #+END_SRC
