@@ -1,10 +1,10 @@
-;;; geoclue.el --- Mouse Follows Focus           -*- lexical-binding: t; -*-
+;;; geoclue.el --- GeoClue2 support for Emacs       -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019 Ian Eure
 
 ;; Author: Ian Eure <public@lowbar.fyi>
 ;; URL: https://github.com/ieure/geoclue
-;; Version: 0.8.0
+;; Version: 0.8.1
 ;; Package-Requires: ((emacs "25"))
 ;; Keywords: tools
 
