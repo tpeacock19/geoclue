@@ -3,7 +3,8 @@
   :ID:       d8b8c6ad-8c31-425c-b51a-96e88d28286f
   :END:
 
-  This is an Emacs library which
+  This is an Emacs library which lets you determine your current
+  location using GeoClue2 over D-Bus.
 
 ** Requirements
    :PROPERTIES:
