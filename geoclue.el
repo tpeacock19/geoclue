@@ -1,4 +1,4 @@
-;;; geoclue.el --- GeoClue2 support for Emacs       -*- lexical-binding: t; -*-
+;;; geoclue.el --- GeoClue2 support                -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019 Ian Eure
 
