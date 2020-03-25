@@ -27,8 +27,7 @@
 
 ;;; Code:
 
-(require 'cl)
-;;(require 'cl-lib)
+(require 'cl-lib)
 (require 'dbus)
 
 (defvar geoclue--client nil
@@ -99,12 +98,12 @@
   (let ((times 0))
     (while (or (not geoclue--location)
                (> times 5))
-      (incf times)
+      (cl-incf times)
       (sleep-for 0 250)))
   (or geoclue--location
       (error "Unable to determine current location")))
 
- ;; User-serviceable parts
+;; User-serviceable parts
 
 ;;;###autoload
 (defun geoclue-start ()
